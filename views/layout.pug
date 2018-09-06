@@ -1,0 +1,47 @@
+doctype html
+html
+  head
+    title= "AR ADMIN APP"
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    link(rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css' integrity='sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm' crossorigin='anonymous')
+    link(rel="stylesheet" href="../stylesheets/style.css")
+    script(src='https://code.jquery.com/jquery-3.2.1.slim.min.js' integrity='sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN' crossorigin='anonymous')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js' integrity='sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q' crossorigin='anonymous')
+    script(src='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js' integrity='sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl' crossorigin='anonymous')
+    link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css')
+    link(rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine|Francois+One|Boogaloo|BenchNine|Didact+Gothic")
+    script(src='https://code.jquery.com/jquery-3.3.1.min.js' integrity='sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=' crossorigin='anonymous')
+
+
+  body
+    nav.navbar.navbar-expand-md.navbar-light.sticky-top(style="background-color: #8bc2c4")
+      .container
+        a.navbar-brand(href='/') AR admin app
+          i.fa.fa-street-view(style="color: red")
+
+        button.navbar-toggler(type='button' data-toggle='collapse' data-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation')
+          span.navbar-toggler-icon
+        #navbarSupportedContent.collapse.navbar-collapse
+          ul.navbar-nav.ml-auto
+            if (!user)
+              li.nav-item.active
+                a.nav-link(href='/login') Login
+              li.nav-item.active
+                a.nav-link(href='/register') Register
+            if (user)
+              li.nav-item.dropdown.active
+                a#navbarDropdown.nav-link.dropdown-toggle(href='#' role='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false').text-uppercase
+                  | #{user.name}
+                .dropdown-menu(aria-labelledby='navbarDropdown')
+                  a.nav-link(href="/logout") Logout   
+    
+    block content
+
+  br
+  br
+  br
+  nav.navbar.navbar-expand-md.navbar-light.fixed-bottom(style="background-color: #8bc2c4")
+    .container
+      h6.mx-auto.foot Created by Bolortsom Enkhsaikhan
+    
+  

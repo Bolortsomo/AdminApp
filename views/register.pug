@@ -1,0 +1,23 @@
+extends layout
+block content
+  .container.form
+    .row
+      .col-lg-12
+        .d-lg-flex
+    .row
+      .col-sm-3
+      .col-sm-6
+        .card
+          .card-header Please register!
+          .card-body
+            form(role='form', action="/register",method="post", style='max-width: 300px;')
+              .form-group
+                input.form-control(type='text', name="username", placeholder='Enter Username')
+              .form-group
+                input.form-control(type='text', name="name", placeholder='Enter Name')
+              .form-group
+                input.form-control(type='password', name="password", placeholder='Password', minlength='6')
+              button.btn.btn-info(type='submit') Submit 
+              ||
+              a(href='/')
+                button.btn.btn-info(type="button") Cancel

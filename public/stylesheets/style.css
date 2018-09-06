@@ -1,0 +1,26 @@
+body {
+  background-image: url("../images/bg-img.jpg");
+  background-size: cover;
+}
+
+a {
+  color: #00b7ff;
+}
+
+nav {
+  font-family: "Didact Gothic";
+  font-size: 1.5em;
+}
+.navbar-brand {
+  font-size: 1em;
+}
+
+footer {
+  background-color: green;
+  color: aqua;
+}
+
+.form {
+  opacity: 0.8;
+  width: 50%;
+}

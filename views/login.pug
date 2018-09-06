@@ -1,0 +1,27 @@
+extends layout
+block content
+  if (!user)     
+    .container.form
+      .row
+        .col-lg-12
+          .d-lg-flex 
+      .row
+        .col-md-3
+        .col-md-6
+          .card
+            .card-header Please login!
+            .card-body
+              form(role='form', action='/login', method='post')
+                .form-group
+                  input.form-control(type='text', name='username', placeholder='Username', required='true')
+                .form-group
+                  input.form-control(type='password', name='password', placeholder='Password', required='true')
+                button.btn.btn-info(type='submit') Login
+              br
+              p Not registered? 
+                a.btn-link(href='/register') Register 
+                | here
+        .col-sm-3
+  if (user)
+    p You are logged, please  
+      a(href='/') return
