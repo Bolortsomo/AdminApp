@@ -1,4 +1,4 @@
-# Guidance for using Git command line tool
+# Setup env by using Git cli
 
 1. Open Git bash
 2. Go to working dir
